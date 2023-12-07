@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+
+
+#intro {
+    font-family: Dongle;
+    font-size: 30px;
+}
+
+.number{
+    height: 75px;
+    width: 75px;
+    margin: 3px;
+    color: black;   
+    font-size: 45px; 
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
+    border: 1px;
+    border-radius: 10px;
+    
+}
+
+.button_anim:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+.button_anim:hover::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+    border-radius: inherit;
+    animation: fade-in 0.2s ease-in-out;
+}  
+.button_anim:hover::before {
+
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: cyan;
+    font-size: 1.2rem;
+    animation: fade-in 0.2s ease-in-out;
+}  
+.button_anim:active {
+    transform: scale(1);
+    z-index: 2;
+}  
+.button_anim:active::before {
+
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: cyan;
+    font-size: 1.2rem;
+    animation: fade-in 0.2s ease-in-out;
+}  
+.button_anim:active::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: inherit;
+    animation: fade-in 0.2s ease-in-out;
+} 
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+
+.all_numbers_buttons {
+
+    /* modifier cette ligne pour la disposition des bouttons */
+    display: block;
+    width: 300px;
+    height: 380px;
+
+    
+}
+
+.all_operators_buttons {
+    /* padding-top: 20px; */
+    width: 120px;
+    /* width: 30px;
+    padding-left: 370px; */
+
+}
+
+.operator {
+    height: 75px;
+    width: 75px;
+    margin: 3px;
+    color: red; 
+    font-size: 45px;
+}
+
+#result{
+    border-color: blue ;
+    border: 4px solid blue;
+    width: 245px;
+    height: 45px;
+    border-radius: 15px;
+}
+
+#equal {
+    height: 75px;
+    width: 160px;
+}
+
+#c_and_ce_buttons {
+    margin: 10px 0px 10px 30px;
+    
+}
+
+.c_and_ce_buttons {
+    color: blue;
+    width: 100px;
+    height: 40px;
+
+}
+
+.number {
+    font-family: "Dongle", sans-serif;
+    font-size: 60px;
+    line-height: 1.35;
+}
+
+#result_p {
+    font-family: "Dongle", sans-serif;
+    font-size: 60px;
+    line-height: 0px;
+    text-align: center;
+    text-shadow: darkblue;
+    margin-top: 30px;
+    width: 250px;
+    
+}
+
+#operator_plus {
+    color: blue;
+}
+
+#operator_times {
+    color: green;
+}
+
+#operator_division {
+    color:orange;
+}
+
+
+.all_buttons {
+    display: flex;
+}
+
+ 
+#historique {
+    text-align: center;
+    display: block;
+    border: 4px solid blue;
+    border-radius: 20px;
+    width: 500px;
+}
+
+#historique p {
+
+    margin: 20px;
+    text-align: center;
+}
